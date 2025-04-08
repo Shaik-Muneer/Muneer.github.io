@@ -2,39 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muneer's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaik Muneer | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #00f2ff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00f2ff;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 5rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      color: #00f2ff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .about-img {
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill {
+      background: rgba(255,255,255,0.05);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.2);
+    }
+    img.skill-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Hi, I'm Muneer 👋</h1>
-      <p>Full Stack Developer | Flutter | .NET | Angular | SQL</p>
-    </header>
+  <header>
+    <h1>Muneer</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I have 2+ years of experience in building web & mobile applications.
-        I love building clean UIs and robust backends!
-      </p>
-    </section>
+  <section class="hero" data-aos="fade-down">
+    <h2>Hi, I'm Muneer</h2>
+    <p>A passionate Developer who loves crafting beautiful web & mobile experiences</p>
+  </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>✅ Todo App (Flutter):</strong> Offline sync + Firebase</li>
-        <li><strong>📊 Angular Admin Panel:</strong> Charts, filters, CRUD</li>
-        <li><strong>🔐 Inventory API (.NET):</strong> Secure REST API + SQL DB</li>
-      </ul>
-    </section>
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/200" alt="Profile" class="about-img">
+    <p>I am a full-stack developer with expertise in web and mobile app development. I love building interactive UIs, scalable backends, and delivering quality code.</p>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>📧 Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      <p>💻 GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
-    </section>
-  </div>
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="skill-icon" alt="HTML">
+        <p>HTML</p>
+      </div>
+      <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="skill-icon" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="skill-icon" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="skill-icon" alt="Flutter">
+        <p>Flutter</p>
+      </div>
+      <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" class="skill-icon" alt="C#">
+        <p>C#</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>You can reach me via:</p>
+    <p>Email: muneer@example.com</p>
+    <p>GitHub: <a href="https://github.com/Shaik-Muneer" style="color:#00f2ff;">@Shaik-Muneer</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Muneer. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
 </body>
 </html>
